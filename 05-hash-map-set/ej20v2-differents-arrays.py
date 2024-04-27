@@ -9,7 +9,7 @@ from json import loads
 from sys import stdin
 
 def findDifference(nums1: List[int], nums2: List[int]) -> List[List[int]]:
-    return [list(set(nums1) - set(nums2)), list(set(nums2) - set(nums1))] #this line has all the logic of the excersice, qhere set() eliminates dulpicateds values
+    return [list(set(nums1) - set(nums2)), list(set(nums2) - set(nums1))] #this line has all the logic of the excersice, where set() eliminates dulpicateds values
 
 #in some IDEs we will need to put this: (not in leetcode)
 f = open("user.out","w") #we open a file to write the output
