@@ -12,9 +12,12 @@
 
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
+        if word1 == word2:
+            return True
+            
         if len(word1) != len(word2):
             return False
-        
+
         dict1 = {}
         dict2 = {}
 
@@ -29,6 +32,18 @@ class Solution:
                 dict2[c] += 1
             else:
                 dict2[c] = 1
+        
+        if len(dict1) != len(dict2) or len(dict1)<2:
+            return False
+
+        #both dictionaries must have same keys or the same except one
+        oneWrong = False
+        for key, value in dict2.items():
+            if key not in dict1 and not oneWrong:
+                oneWrong = True
+            elif key not in dict1 and oneWrong:
+                return False
+
 
         freqs1 = sorted(list(dict1.values()))
         freqs2 = sorted(list(dict2.values()))
@@ -37,3 +52,8 @@ class Solution:
             return True
         else:
             return False
+        
+solution = Solution()
+word1 = "a"
+word2 = "b"
+print(solution.closeStrings(word1, word2))
