@@ -8,7 +8,7 @@
 
 #Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 
-#excersie 1657
+#exercise 1657
 
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:

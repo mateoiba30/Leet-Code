@@ -7,7 +7,7 @@
 #The input will be generated such that the operation is always possible.
 #It can be shown that the resulting string will always be unique.
 
-#excersice 2390
+#exercise 2390
 
 class Solution:
     def removeStars(self, s: str) -> str:
