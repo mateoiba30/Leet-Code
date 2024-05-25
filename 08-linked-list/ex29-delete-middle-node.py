@@ -4,7 +4,11 @@
 #excercise 2095
 
 from typing import Optional
-from typing import ListNode
+
+class ListNode:
+    def __init__(self, val: int = 0, next: Optional['ListNode'] = None):
+        self.val = val
+        self.next = next
 
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
