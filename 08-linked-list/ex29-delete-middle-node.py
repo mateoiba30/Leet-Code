@@ -1,7 +1,7 @@
 #You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.
 #The middle node of a linked list of size n is the ⌊n / 2⌋th node from the start using 0-based indexing, where ⌊x⌋ denotes the largest integer less than or equal to x.
 
-#excercise 2095
+#exercise 2095
 
 from typing import Optional
 
