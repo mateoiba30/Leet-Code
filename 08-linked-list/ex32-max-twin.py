@@ -3,4 +3,36 @@
 #The twin sum is defined as the sum of a node and its twin.
 #Given the head of a linked list with even length, return the maximum twin sum of the linked list.
 
-#exercise
+#exercise 2130
+
+from typing import Optional
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def pairSum(self, head: Optional[ListNode]) -> int:
+        size = 0
+        steps = 0
+        actual = head 
+        sums = []
+
+        while actual != None:
+            size += 1
+            actual = actual.next
+
+        actual = head
+        while steps < size/2:
+            sums.append(actual.val)
+            actual = actual.next
+            steps += 1
+
+        cont = 1
+        while actual != None:
+            sums[-cont]+=actual.val
+            cont+=1
+            actual = actual.next
+
+        return max(sums)
